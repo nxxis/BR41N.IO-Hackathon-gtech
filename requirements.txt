@@ -1,0 +1,8 @@
+matplotlib==3.11.2
+mne==1.13.2
+numpy==2.4.6
+pillow==12.3.0
+pyriemann==0.12
+scikit-learn==1.9.1
+scipy==1.17.1
+statsmodels==0.15.0

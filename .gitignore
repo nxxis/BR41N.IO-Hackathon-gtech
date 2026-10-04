@@ -1,0 +1,9 @@
+# datasets are g.tec's to distribute: fetch with scripts/download_data.sh
+data/
+.venv/
+# slides, deck builder and video script are delivered through the hackathon's Google Drive
+presentation/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
