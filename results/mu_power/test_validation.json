@@ -1,0 +1,15 @@
+{
+  "tests": "6 passed",
+  "test_runtime": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pyriemann": "0.12"
+  },
+  "all_12_loader_outputs_match_original": true,
+  "all_3_mu_csvs_match_prior_validated_analysis": true,
+  "original_figures_byte_identical": true,
+  "original_result_json_values_unchanged": true,
+  "original_classifiers_rerun": false,
+  "coverage": "New synthetic tests, loader compatibility, notebook execution and artifact integrity; not clinical validation"
+}

@@ -1,0 +1,127 @@
+{
+  "original_head": "ac15a8f41abf4b514482cb669c192ac410536b8c",
+  "all_12_original_outputs_match": true,
+  "scope": "Input metadata and equality check only; no classifier fitted",
+  "recordings": [
+    {
+      "recording": "P1_pre_training",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P1_pre_test",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P1_post_training",
+      "total_trials": 80,
+      "retained_trials": 79,
+      "boundary_excluded_trials": 1,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P1_post_test",
+      "total_trials": 80,
+      "retained_trials": 79,
+      "boundary_excluded_trials": 1,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P2_pre_training",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P2_pre_test",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P2_post_training",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P2_post_test",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P3_pre_training",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P3_pre_test",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P3_post_training",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    },
+    {
+      "recording": "P3_post_test",
+      "total_trials": 80,
+      "retained_trials": 80,
+      "boundary_excluded_trials": 0,
+      "epoch_seconds": [
+        -2.0,
+        8.0
+      ]
+    }
+  ]
+}

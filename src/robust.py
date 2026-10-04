@@ -1,5 +1,5 @@
-"""Robustness of the main finding. Lateralisation index = contralateral minus ipsilateral ERD (dB),
-negative = normal (opposite hemisphere more engaged). Varies band, spatial reference and window.
+"""Sensitivity checks on the same recordings (not independent validation). Lateralisation index = contralateral minus ipsilateral ERD (dB),
+Negative means lower relative power at the contralateral scalp sensor. Varies band, spatial reference and window.
 Plus: binomial tests for imagery-only decoding, and whether lateralisation predicts classifier success."""
 import sys, json, numpy as np
 from scipy.signal import hilbert
@@ -22,7 +22,7 @@ def db(sess, band, win, ref):
 def li(d, lab):                      # per trial: contra - ipsi
     return np.where(lab == 1, d[:, 1] - d[:, 0], d[:, 0] - d[:, 1])
 
-print("Lateralisation index, median over trials (dB). negative = contralateral hemisphere more engaged")
+print("Lateralisation index, median over trials (dB). negative = lower relative power at the contralateral scalp sensor")
 print("band  ref        window   | " + "  ".join(s.rjust(8) for s in SESSIONS) + " | pre->post p: P1     P2     P3")
 for bn, band in (("beta", (13, 30)), ("mu", (8, 13)), ("8-30", (8, 30))):
     for ref in ("laplacian", "car", "raw"):
@@ -36,7 +36,7 @@ for s in SESSIONS:
     d, lab = db(s, (13, 30), (2.0, 3.5), "laplacian"); l = li(d, lab)
     print(f"   {s:8s} left hand {np.median(l[lab==1]):+5.2f}   right hand {np.median(l[lab==-1]):+5.2f}")
 
-print("\nImagery-only decoding vs chance (binomial, one-sided)")
+print("\nEarly post-cue decoding vs chance (offline, feedback onset unverified) (binomial, one-sided)")
 D = json.load(open("results/deeper.json"))
 for s in SESSIONS:
     n = 79 if s == "P1_post" else 80; k = round(D[s]["imagery_tt"] * n / 100)

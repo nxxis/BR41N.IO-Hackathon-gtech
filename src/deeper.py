@@ -1,8 +1,8 @@
 """Deeper questions:
-A  imagery-only decoding (2-3.5 s: after cue, before any FES / visual feedback), pre vs post
+A  early post-cue decoding (2-3.5 s; actual feedback onset unverified), pre vs post
 B  like-for-like with the reference metric: time-resolved accuracy in 0.5 s steps, max in the feedback phase
 C  Wilson 95% CIs for the headline accuracies
-D  hemisphere asymmetry of beta ERD per hand, imagery-only vs feedback window, bootstrap CIs"""
+D  hemisphere asymmetry of beta ERD per hand, early post-cue vs documented feedback window, bootstrap CIs"""
 import sys, json, numpy as np
 from scipy.signal import hilbert
 from scipy.stats import mannwhitneyu
@@ -15,7 +15,7 @@ rng = np.random.default_rng(0); out = {}
 def fb_riemann(fs, win, C=0.01):
     return make_pipeline(BankFeatures(fs, (win,), "ts"), StandardScaler(), LogisticRegression(C=C, max_iter=3000))
 
-print("A  imagery-only window 2.0-3.5 s (no feedback yet) | train->test, and 10-fold CV on all 160 trials")
+print("A  early post-cue window 2.0-3.5 s (offline timing sensitivity) | train->test, and 10-fold CV on all 160 trials")
 data = {s: {r: load_bank(f"{s}_{r}") for r in ("training", "test")} for s in SESSIONS}
 for s in SESSIONS:
     (Xtr, ytr, fs), (Xte, yte, _) = data[s]["training"], data[s]["test"]

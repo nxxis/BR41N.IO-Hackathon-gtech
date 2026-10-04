@@ -7,3 +7,8 @@ __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
+*.mat
+*.rar
+.pytest_cache/
+.matplotlib-cache/
+.analysis-kernel.json
