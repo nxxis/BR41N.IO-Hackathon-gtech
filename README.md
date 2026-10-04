@@ -17,6 +17,13 @@ Its engagement/imagery-only labels are shorthand: offline filtering, Hilbert
 processing and centred smoothing mix information across time. The animation
 cannot establish that displayed early activity preceded actual feedback.
 
+## Research questions
+
+1. How does within-session hand classification compare with the supplied reference results, accounting for different scoring methods?
+2. How do timing and measurement assumptions affect classification, and which imagery/cue/feedback explanations remain unresolved?
+3. How well does a labelled model transfer between sessions, with PRE→POST reported separately from POST→PRE?
+4. Which scalp-power patterns differ between the first and last sessions, without assuming those differences demonstrate recovery?
+
 ## The data
 
 Three chronic-stroke participants completed 25 therapy sessions. The release
@@ -89,6 +96,14 @@ already extracted, set `STROKE_REHAB_DATA` to their folder; the loader accepts
 flat and nested organiser layouts. For the mu script, pass that same folder
 with `--data-dir`. The notebook also reads `STROKE_REHAB_DATA`.
 The shell downloader needs curl and bsdtar; it is not required for existing data.
+
+**Verified for this contribution:** all eight notebook code cells executed;
+six synthetic tests passed; the updated loader returns the original samples
+and labels for all twelve recordings; all three mu-analysis CSVs match the
+previously checked computation. Original figures and result values are retained.
+The complete seven-step original pipeline has not been rerun in its exact pinned
+environment here. Supplied reproduction scripts are distinct from a verified
+end-to-end reproduction of every reported result.
 
 - `src/mi.py`: loading, epoching, feature banks and classifier pipelines.
 - `src/benchmark.py`, `adapt.py`: original decoding and transfer comparisons.
